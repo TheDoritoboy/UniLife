@@ -7,7 +7,7 @@ function Header() {
         {/*<img src="..\assets\holiday_village_FILL0_wght300_GRAD0_opsz48 3.png" alt="" />
         <img src="..\assets\UniLife.svg" alt="" />*/}
         <p><BsHeart/> Shortlist</p>
-        <p><AiOutlineMail/>Contact Us</p>
+        <p><AiOutlineMail/> Contact Us</p>
     </div>
   )
 }
