@@ -1,4 +1,5 @@
 import React from 'react'
+import './Header.css'
 import { BsHeart } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
 function Header() {
