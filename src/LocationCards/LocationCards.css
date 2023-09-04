@@ -1,0 +1,46 @@
+.City-img
+{
+    width: 400px;
+    height: 300px;
+    flex-shrink: 0;
+    border-radius: 24px;
+
+}
+
+.City-name
+{
+font-size: 40px;
+}
+
+.Property-count
+{
+font-size: 20px;
+}
+
+.Card-text
+{
+    background: rgb(0, 0, 0, 0.30);
+    backdrop-filter: blur(2px);
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    
+}
+
+.Card-container
+{
+    margin: 20px 40px 20px 40px;
+    width: 400px;
+    height: 300px;
+    position: relative;
+}
+

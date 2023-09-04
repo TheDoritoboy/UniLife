@@ -2,4 +2,23 @@
 {
     background-color: black;
     color: grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px 80px 40px 80px;
+}
+
+.Left-foot
+{
+    display: flex;
+}
+
+.Right-foot
+{
+    display: flex;
+}
+
+.Foot-text
+{
+    margin-right: 20px
 }

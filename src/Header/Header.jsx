@@ -5,10 +5,14 @@ import { AiOutlineMail } from "react-icons/ai";
 function Header() {
   return (
     <div className='Header'>
-        {/*<img src="..\assets\holiday_village_FILL0_wght300_GRAD0_opsz48 3.png" alt="" />
-        <img src="..\assets\UniLife.svg" alt="" />*/}
-        <p><BsHeart/> Shortlist</p>
-        <p><AiOutlineMail/> Contact Us</p>
+      <div className="Left-head">
+        <img src="src\assets\holiday_village_FILL0_wght300_GRAD0_opsz48 3.png" alt="" />
+        <img src="src\assets\UniLife.svg" alt="" />
+      </div>
+      <div className="Right-head">
+        <p className='Heart'><BsHeart/>&nbsp;&nbsp;&nbsp;Shortlist</p>
+        <p className='Mail'><AiOutlineMail/>&nbsp;&nbsp;&nbsp;Contact Us</p>
+      </div>
     </div>
   )
 }

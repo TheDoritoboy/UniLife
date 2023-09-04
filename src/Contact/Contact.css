@@ -3,4 +3,40 @@
     background-color: #00A2E1;
     height: 374px;
     width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
+
+.Contact-text
+{
+    color: white;
+    font-size: 20px;
+
+    margin-top: 16px;
+
+}
+
+input
+{
+width: 440px;
+height: 48px;
+border: none;
+border-radius: 12px;
+text-align: left;
+color: #CED3D8;
+font-family: Epilogue;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-top: 38px;
+}
+
+
+.Touch
+{
+    font-size: 36px;
+}
+

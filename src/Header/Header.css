@@ -1,6 +1,28 @@
 .Header
 {
+    display: flex;
     width: auto;
     height: 60px;
     background-color: #00A2E1;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Left-head
+{
+    margin-left: 67px;
+}
+
+.Right-head
+{
+display: flex;
+flex-direction: row;
+margin-right: 80px;
+margin-top: 20px;
+color: white;
+}
+
+.Heart
+{
+    margin-right: 40px;
 }
