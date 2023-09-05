@@ -10,11 +10,15 @@
 .City-name
 {
 font-size: 40px;
+text-decoration: none;
+color: white;
 }
 
 .Property-count
 {
 font-size: 20px;
+text-decoration: none;
+color: white;
 }
 
 .Card-text

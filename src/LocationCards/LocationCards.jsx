@@ -11,8 +11,8 @@ function LocationCards({city}) {
         <div className='Card-container'>
           <img className='City-img' src={city.image_url} alt={city.name} />
           <div className='Card-text'>
-            <p className='City-name'>{city.name}</p>
-            <p className='Property-count'>{city.property_count} properties</p>
+            <a href={`/City/${city._id}`} className='City-name'>{city.name}</a>
+            <a href={`/City/${city._id}`} className='Property-count'>{city.property_count} properties</a>
           </div>
         </div>
     </div>

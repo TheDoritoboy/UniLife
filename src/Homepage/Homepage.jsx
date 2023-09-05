@@ -28,7 +28,7 @@ function Homepage() {
             <p className='Small-text'>A simple and faster way to search for student accommodation</p>
           </div> 
       </div>
-          <div>
+          <div className='City-drop'>
           <label for="City-names">Search by city</label> 
     <select name="City-names" id="City-names"> 
             {

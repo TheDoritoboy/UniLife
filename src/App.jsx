@@ -5,6 +5,8 @@ import Homepage from './Homepage/Homepage'
 import Header from './Header/Header'
 import Footer from './Footer/Footer'
 import Contact from './Contact/Contact'
+import LocationDetails from './LocationDetails/LocationDetails'
+
 function App() {
 
   return (
@@ -12,7 +14,7 @@ function App() {
     <Header/>
       <Routes>
       <Route path='/' element= {<Homepage />}/>
-      <Route path='/' element= {<Homepage />}/>
+      <Route path='/City/:itemId' element= {<LocationDetails />}/>
       </Routes>
     <Contact/>
     <Footer/>
