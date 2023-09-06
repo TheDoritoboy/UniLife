@@ -6,6 +6,7 @@ import Header from './Header/Header'
 import Footer from './Footer/Footer'
 import Contact from './Contact/Contact'
 import LocationDetails from './LocationDetails/LocationDetails'
+import CitySearch from './CitySearch/CitySearch'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <Routes>
       <Route path='/' element= {<Homepage />}/>
       <Route path='/City/:itemId' element= {<LocationDetails />}/>
+      <Route path='/Search' element= {<CitySearch />}/>
       </Routes>
     <Contact/>
     <Footer/>

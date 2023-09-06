@@ -2,10 +2,11 @@ import React, {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 import axios from 'axios'
 import './LocationDetails.css'
+import ApartmentCards from './../ApartmentCards/ApartmentCards';
 function LocationDetails() {
     const {itemId} =useParams()
 
-  const [city, setCity] = useState('')
+  const [apartment, setApartment] = useState([])
 
   useEffect(
     ()=>
@@ -14,7 +15,7 @@ function LocationDetails() {
       .then(res =>{
         console.log(res.data.response)
 
-        setCity(res.data.response)
+        setApartment(res.data.response)
       })
       .catch(err=> console.log(err))
 
@@ -24,7 +25,13 @@ function LocationDetails() {
   )
   return (
     <div>
-<p>{city.rent}</p>
+      
+      {
+      
+      /*{
+        city.map(item => <ApartmentCards key={city._id} apartment={item}/>)
+      }*/
+      }
 
     </div>
   )

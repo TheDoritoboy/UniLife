@@ -1,8 +1,12 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
+import axios from 'axios'
+function ApartmentCards(apartment) {
 
-function ApartmentCards() {
+
   return (
-    <div>ApartmentCards</div>
+    <div>
+      <p>{apartment.adress}</p>
+    </div>
   )
 }
 

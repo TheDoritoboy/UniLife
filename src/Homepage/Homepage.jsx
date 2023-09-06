@@ -8,7 +8,8 @@ function Homepage() {
 
 
   useEffect(
-  ()=>{ axios.get('https://unilife-server.herokuapp.com/cities')
+  ()=>{ 
+    axios.get('https://unilife-server.herokuapp.com/cities')
   .then(res =>{
     console.log(res.data.response)
     setCities(res.data.response) 
@@ -47,7 +48,7 @@ function Homepage() {
         cities.slice(0,9).map(item => <LocationCards key={item._id} city={item}/>)
       }
       </div>
-      <p className='City-button'>See all Cities</p>
+      <a href='/Search' className='City-button'>See all Cities</a>
       <div className="Info-container">
         <div className="Tidbits">
           <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" fill="none">
