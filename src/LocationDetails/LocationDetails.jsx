@@ -24,9 +24,7 @@ function LocationDetails() {
   )
   return (
     <div>
-{
- 
-}
+<p>{city.rent}</p>
 
     </div>
   )
