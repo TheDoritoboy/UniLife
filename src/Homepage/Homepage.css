@@ -6,6 +6,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 229px;
 }
 
 .Big-banner
@@ -21,7 +22,7 @@
     align-content: center;
     position: absolute;
     top: 40%;
-   left: 25%;
+   left:  30%;
    color: white;
 
 
@@ -44,6 +45,9 @@
 
 .City-button
 {
+    display: flex;
+    align-items: center;
+        justify-content: center;
     text-align: center;
     font-size: 20px;
     height: 48px;
@@ -53,7 +57,7 @@
     color: white;
     margin-left: 43%;
     margin-top: 5px;
-    padding-top: 20px;
+    text-decoration: none;
     margin: auto;
 }
 
@@ -80,9 +84,123 @@
 
 .City-drop
 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     height: 128px;
     width: 1112px;
     border-radius: 24px;
     background: #FFF;
     box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+    position: absolute;
+    bottom: -8%;
+  margin-left:25vw ;
 }
+
+.City-names
+{
+    width: 557.743px;
+    height: 48px;
+    flex-shrink: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: #CED3D8;
+    font-family: Epilogue;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 12px;
+    border: 1px solid #CED3D8;
+}
+
+.Finder
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 348.589px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background-color: #3A5295;
+    color: #FFF;
+    text-align: center;
+    font-family: Epilogue;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 72px;
+}
+
+.Under-text
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.Under-item
+{
+margin-left: 40px;
+}
+
+.Under-info
+{
+    display: flex;
+    justify-content: space-around;
+}
+.Original-name
+{
+    display: flex;
+    
+}
+
+.Under-bold
+{
+    color: #000;
+    font-family: Epilogue;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px;
+}
+
+.Under-description
+{
+    color: #383838;
+    font-family: Epilogue;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; 
+    width: 440px;
+    margin-bottom: 40px;
+}
+
+.Under-search
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #3A5295;
+    color: #FFF;
+    text-align: center;
+    font-family: Epilogue;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+    }
+
+    .Man
+    {
+        margin-bottom: -5px;
+    }

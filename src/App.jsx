@@ -17,6 +17,7 @@ function App() {
       <Route path='/' element= {<Homepage />}/>
       <Route path='/City/:itemId' element= {<LocationDetails />}/>
       <Route path='/Search' element= {<CitySearch />}/>
+      
       </Routes>
     <Contact/>
     <Footer/>

@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 import './CitySearch.css'
 function CitySearch() {
-    const [cities, setCities] = useState([])
+    const [cities2, setCities2] = useState([])
 
 
 
@@ -11,7 +11,7 @@ function CitySearch() {
       axios.get('https://unilife-server.herokuapp.com/cities')
     .then(res =>{
       console.log(res.data.response)
-      setCities(res.data.response) 
+      setCities2(res.data.response) 
   })
   .catch(err =>{
       console.log(err)
@@ -19,10 +19,18 @@ function CitySearch() {
     }
     )
   return (
-    <div className='Name-container'>
-     {
-        cities.map(item => <p classname='City-name'>{item.name}</p>)
-     }
+    <div>
+      <img className="Banner" src="/src/assets/overlay.png" alt="" />
+      <div className="Banner-text">
+            <p className='Large-text'>Student Accomodation</p>
+            <p className='Small-text'>UniLife have student accommodation available across the UK.
+Whatever you're after, we can help you find the right student accommodation for you. </p>
+          </div> 
+      <div className='Name-container'>
+        {
+            cities2.map(item2 => <p className='City-name2'>{item2.name}</p>)
+        }
+      </div>
     </div>
   )
 }
