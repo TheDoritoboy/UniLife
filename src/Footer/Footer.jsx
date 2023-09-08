@@ -11,7 +11,7 @@ function Footer() {
       </div>
       <div className='Right-foot'>
           <p className='Foot-text'> 2023 </p>
-          <p className='Foot-text'><AiOutlineCopyright/> UniLife</p>
+          <p className='Foot-text'><AiOutlineCopyright/> <a className='Foot-text' href='/'>UniLife</a></p>
       </div>
     </div>
   )

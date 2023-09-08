@@ -16,9 +16,13 @@
 .Right-foot
 {
     display: flex;
+    color: grey;
+    text-decoration: none;
 }
 
 .Foot-text
 {
-    margin-right: 20px
+    margin-right: 20px;
+    color: grey;
+    text-decoration: none;
 }
