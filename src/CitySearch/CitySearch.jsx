@@ -28,7 +28,7 @@ Whatever you're after, we can help you find the right student accommodation for 
           </div> 
       <div className='Name-container'>
         {
-            cities2.map(item2 => <p className='City-name2'>{item2.name}</p>)
+            cities2.map(item2 => <a href={`/City/${item2._id}`} key={item2._id} className='City-name2'>{item2.name}</a>)
         }
       </div>
     </div>

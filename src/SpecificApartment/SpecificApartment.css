@@ -1,0 +1,19 @@
+ .Img-container
+{
+    width: 620px;
+    height: auto;
+}
+
+.Big-img
+{
+    width: 620px;
+    height: 400px;
+    flex-shrink: 0;
+}
+
+.Small-img
+{
+    width: 196px;
+    height: 140px;
+    flex-shrink: 0;
+} 

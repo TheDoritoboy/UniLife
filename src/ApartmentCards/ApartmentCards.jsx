@@ -26,7 +26,7 @@ function ApartmentCards({abode}) {
           </div>
           <div className="Info-bar">
           <div className="Cool-stuff">
-            <p>Detached</p>
+            <p>{abode.apartment_type}</p>
             <p>{abode.furnished}</p>
           </div>
             <p className='Address'>
