@@ -26,3 +26,15 @@ color: white;
 {
     margin-right: 40px;
 }
+
+.Mail
+{
+    background-color: #00A2E1;
+    border: none;
+    color: white;
+    display: flex;
+    font-family: Epilogue;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+}
