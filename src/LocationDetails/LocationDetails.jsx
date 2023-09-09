@@ -6,7 +6,7 @@ import ApartmentCards from './../ApartmentCards/ApartmentCards';
 function LocationDetails() {
     const {itemId} =useParams()
 
-  const [apartment, setApartment] = useState([])
+    const [abodes, setAbodes] = useState([])
 
   useEffect(
     ()=>
@@ -15,7 +15,7 @@ function LocationDetails() {
       .then(res =>{
         console.log(res.data.response)
 
-        setApartment(res.data.response)
+        setAbodes(res.data.response)
       })
       .catch(err=> console.log(err))
 
@@ -24,15 +24,10 @@ function LocationDetails() {
     },[]
   )
   return (
-    <div>
-      
+    <div className='Acual-abode'>
       {
-      
-      /*{
-        city.map(item => <ApartmentCards key={city._id} apartment={item}/>)
-      }*/
+        abodes.map(item => <ApartmentCards key={item._id} abode={item}/>)
       }
-
     </div>
   )
 }
