@@ -1,3 +1,9 @@
+ .Top-container
+ {
+    display: flex;
+    justify-content: space-around;
+ }
+ 
  .Img-container
 {
     width: 620px;
@@ -28,9 +34,270 @@
     flex-shrink: 0;
 } 
 
-.Info-container
+.Right-container
 {
+    display: flex;
+    flex-direction: column;
+}
+
+.Info-container2
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     width: 620px;
     height: 484px;
     flex-shrink: 0;
+    border-radius: 24px;
+    border: 1px solid #CED3D8;
 }
+
+.Address2
+{
+    width: 540px;
+    color: #000;
+    text-align: center;
+    font-family: Epilogue;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px; 
+    margin: 40px;
+    border-bottom: solid 1px black;
+}
+
+.Detail-name
+{
+    width: 160px;
+    color: #000;
+    text-align: center;
+    font-family: Epilogue;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; 
+}
+
+.Detail-data
+{
+    color: #3A5295;
+    text-align: center;
+    font-family: Epilogue;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px; 
+}
+
+.Info-item
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.Button-and-info
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.Button-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.View-button
+{
+    width: 298px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #3A5295;
+    color: #FFF;
+    text-align: center;
+    font-family: Epilogue;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border: none;
+}
+
+.Short-button
+{
+    display: flex;
+    border-radius: 12px;
+    border: 1px solid #CED3D8;
+    background: #FFF;
+    width: 298px;
+    height: 48px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Epilogue;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; 
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+.Mid-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 80px;
+    
+}
+
+
+.The-word
+{
+    color: #000;
+    font-family: Epilogue;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 48px;
+    
+}
+
+.Property-details
+{
+    width: 520px;
+    color: #000;
+    font-family: Epilogue;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; 
+    margin-right: 40px;
+}
+
+.Individual-prices
+{
+    color: #000;
+    font-family: Epilogue;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; 
+    border-bottom: solid 1px #CED3D8;
+    width: 620px;
+}
+
+.Prices
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 620px;
+    height: 275px;
+    flex-shrink: 0;
+    border-radius: 24px;
+    border: 1px solid #CED3D8;
+}
+
+.Key-features
+{
+    margin-top: 75px;
+    margin-left: 80px;
+}
+
+.Feature-list
+{
+    color: #000;
+    font-family: Epilogue;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; 
+}
+
+.Top-modal
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.Modal-address
+{
+    text-align: center;
+    color: #000;
+    font-family: Epilogue;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+.Input-container
+{
+    display: flex;
+    
+}
+
+.Left-modal
+{
+    display: flex;
+    flex-direction: column;  
+    margin-right: 20px;
+}
+
+.Right-modal
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Small-input
+{
+    border-radius: 12px;
+    border: 1px solid #CED3D8;
+    background: #FFF;
+    width: 400px;
+    height: 56px;
+    flex-shrink: 0;
+}
+
+.Big-input
+{
+    width: 400px;
+    height: 184px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    border: 1px solid #CED3D8;
+    background: #FFF;
+}
+
+.Modal-button
+{
+    border-radius: 12px;
+    background: #3A5295;
+    width: 400px;
+    height: 56px;
+    flex-shrink: 0;
+    color: #FFF;
+    text-align: center;
+    font-family: Epilogue;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border: none;
+}
+
