@@ -2,18 +2,35 @@
 {
     width: 620px;
     height: auto;
+    
 }
 
 .Big-img
 {
+    border-radius: 24px;
     width: 620px;
     height: 400px;
     flex-shrink: 0;
 }
+.Small-img-container
+{
+    display: flex;
+    width: 620px;
+    justify-content: space-between;
+    margin-top: 16px;
+}
 
 .Small-img
 {
+    border-radius: 24px;
     width: 196px;
     height: 140px;
     flex-shrink: 0;
 } 
+
+.Info-container
+{
+    width: 620px;
+    height: 484px;
+    flex-shrink: 0;
+}

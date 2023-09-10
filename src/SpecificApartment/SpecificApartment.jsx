@@ -3,25 +3,52 @@ import {useParams} from 'react-router-dom'
 import axios from 'axios'
 import './SpecificApartment.css'
 function SpecificApartment() {
-    const {aptId} =useParams()
+    const { aptId } = useParams();
+    const [details, setDetails] = useState({});
+    const [loading, setLoading] = useState(true); 
+  
+    useEffect(() => {
+      axios
+        .get(`https://unilife-server.herokuapp.com/properties/${aptId}`)
+        .then((res) => {
+          console.log(res.data);
+          setDetails(res.data);
+          setLoading(false); // Set loading to false when data is fetched
+        })
+        .catch((err) => {
+          console.log(err);
+          setLoading(false); // Set loading to false on error
+        });
+  
+      console.log('get item info', aptId);
+    }, [aptId]);
+  
+    // Check if loading
+    if (loading) {
+      return <div>Loading...</div>;
+    }
+  
+    // Check if details is empty
+    if (!details) {
+      return <div>Details not found</div>;
+    }
+  
+    // Check if address is defined
+    const address = details.address || {};
+    
+    let bedroomPricesArray = [];
 
-    const [details, setDetails] = useState([])
+    const keyFeaturesList = (details.key_features || []).map((feature) => (
+        <p key={feature}>              
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path d="M12.6 23.3999C12.4666 23.3999 12.3444 23.3776 12.2333 23.3332C12.1222 23.2888 12.0111 23.211 11.9 23.0999L5.86665 17.0665C5.66665 16.8665 5.56665 16.6221 5.56665 16.3332C5.56665 16.0443 5.66665 15.7999 5.86665 15.5999C6.06665 15.3999 6.29998 15.2999 6.56665 15.2999C6.83332 15.2999 7.06665 15.3999 7.26665 15.5999L12.6 20.9332L24.7 8.8332C24.9 8.6332 25.1389 8.5332 25.4166 8.5332C25.6944 8.5332 25.9333 8.6332 26.1333 8.8332C26.3333 9.0332 26.4333 9.27209 26.4333 9.54987C26.4333 9.82765 26.3333 10.0665 26.1333 10.2665L13.3 23.0999C13.1889 23.211 13.0778 23.2888 12.9667 23.3332C12.8555 23.3776 12.7333 23.3999 12.6 23.3999Z" fill="#3A5295"/>
+            </svg>{feature}
+        </p>
+      ));
 
-  useEffect(
-    ()=>
-    {
-      axios.get(`https://unilife-server.herokuapp.com/properties/${aptId}`)
-      .then(res =>{
-        console.log(res.data)
-
-        setDetails(res.data)
-      })
-      .catch(err=> console.log(err))
-
-
-      console.log('get item info', aptId)      
-    },[]
-  )
+    if (details.bedroom_prices) {
+      bedroomPricesArray = Object.entries(details.bedroom_prices);
+    }
   return (
     <div>
         <a href='/'>
@@ -32,19 +59,34 @@ function SpecificApartment() {
         </a>
         
         <div className="Home-container">
-            <div className="Top-contianer">
+            <div className="Top-container">
                 <div className="Img-container">
                     <div className='Big-img'>
-                    <img src={details.images[0]} alt="" />
+                    {details.images && details.images.length > 0 && (
+  <img className='Big-img' src={details.images[0]} alt="" />
+)}
                     </div>
-                    <img className='Small-img' src={details.images[1]} alt="" />
-                    <img className='Small-img' src={details.images[2]} alt="" />
-                    <img className='Small-img' src={details.images[3]} alt="" />
-                            
+                    <div className="Small-img-container">
+                    {
+                    details.images && details.images.length > 1 && (
+                        <img className='Small-img' src={details.images[1]} alt="" />
+                    )
+                    }
+                    {
+                    details.images && details.images.length > 2 && (
+                        <img className='Small-img' src={details.images[2]} alt="" />
+                    )
+                    }
+                    {
+                    details.images && details.images.length > 3 && (
+                        <img className='Small-img' src={details.images[3]} alt="" />
+                    )
+                    }
+                    </div>
                 </div>
                 <div className="Info-container">
                     {<p key={details._id}>{details.address.street}, {details.address.city}, {details.address.postcode}</p>}
-                    <div>
+                    <div className='Info-item'>
                         <p>Bedrooms</p>
                         <p >
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
@@ -53,7 +95,7 @@ function SpecificApartment() {
                             {details.bedroom_count}
                         </p>
                     </div>
-                    <div>
+                    <div className='Info-item'>
                         <p>Bathrooms</p>
                         <p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
@@ -62,19 +104,19 @@ function SpecificApartment() {
                             {details.bathroom_count}
                         </p>
                     </div>
-                    <div>
+                    <div className='Info-item'>
                         <p>Proprty Type</p>
                         <p>{details.property_type}</p>
                     </div>
-                    <div>
+                    <div className='Info-item'>
                         <p>Price</p>
                         <p>£{details.rent}</p>
                     </div>
-                    <div>
+                    <div className='Info-item'>
                         <p>Furnished Type</p>
                         <p>{details.furnished}</p>
                     </div>
-                    <div>
+                    <div className='Info-item'>
                         <p>Available from</p>
                         <p>{details.availability}</p>
                     </div>
@@ -95,14 +137,19 @@ function SpecificApartment() {
                     <p>Remodelled to perfection! This beautiful home is located close to shopping and dining. Here are just a few of its wonderful features: cozy fireplace, new kitchen cabinets, stainless steel sink, modern quartz counter tops, wood flooring, remodelled bathrooms, freshly painted, central a/c, attached two-car garage, large back yard, and so much more!</p>
                 </div>
                 <div>
-                    <p></p>
-                   {/*somehow map the bedroom prices */}
-                </div>
+                {bedroomPricesArray.map(([bedroomName, price]) => (
+              <p key={bedroomName}> 
+
+                {bedroomName}:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;£{price}
+              </p>
+            ))}
+            
                 <div className="Key-features">
                     <p>Key Features</p>
-                    {/*somehow map the features */}
+                    {keyFeaturesList}
                 </div>
 
+                </div>
             </div>
         </div>
     </div>
